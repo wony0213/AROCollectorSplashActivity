@@ -76,10 +76,19 @@
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name=".activities.AROCollectorRestartActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"/>
+        <receiver android:name=".broadcast.AROCoolectorStartBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.att.android.arodatacollector.action.ARO_START"/>
+                <category android:name="com.att.android.arodatacollector.category.ARO_START"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".broadcast.AROCoolectorStopBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.att.android.arodatacollector.action.ARO_STOP"/>
+                <category android:name="com.att.android.arodatacollector.category.ARO_STOP"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
