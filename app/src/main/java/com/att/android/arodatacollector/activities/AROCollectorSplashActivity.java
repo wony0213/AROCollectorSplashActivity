@@ -381,13 +381,8 @@ public class AROCollectorSplashActivity extends Activity {
             if (resultCode == AROCollectorLegalTermsActivity.TERMS_ACCEPTED) {
                 AROLogger.d(TAG, "inside onActivityResult, starting main activity");
                 startMainActivity();
-
             } else {
                 AROLogger.d(TAG, "inside onActivityResult, term not accepted, closing activity");
-
-				/*if (resultCode == AROCollectorLegalTermsActivity.TERMS_REJECTED){
-                    resetAnalyzerLaunchWaitingIndicator();
-				}*/
                 finish();
             }
             if (aroDCStartWatchTimer != null

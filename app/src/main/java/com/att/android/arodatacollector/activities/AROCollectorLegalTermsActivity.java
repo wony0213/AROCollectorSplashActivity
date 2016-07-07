@@ -219,7 +219,7 @@ public class AROCollectorLegalTermsActivity extends Activity {
      * method to register the receiver that listens to analyzer launch intent
      */
     private void registerAnalyzerLaunchReceiver() {
-        AROLogger.d(TAG, "registering analyzerTimeOutReceiver");
+        AROLogger.d(TAG, "registering analyzerLaunchReceiver");
         registerReceiver(analyzerLaunchReceiver, new IntentFilter(AROCollectorUtils.ANALYZER_LAUNCH_CLEANUP_INTENT));
     }
 

@@ -161,7 +161,7 @@ public class AROCollectorMainActivity extends Activity {
      * method to register the receiver that listens to analyzer launch intent
      */
     private void registerAnalyzerLaunchReceiver() {
-        AROLogger.d(TAG, "registering analyzerTimeOutReceiver");
+        AROLogger.d(TAG, "registering analyzerLaunchReceiver");
         registerReceiver(analyzerLaunchReceiver, new IntentFilter(AROCollectorUtils.ANALYZER_LAUNCH_CLEANUP_INTENT));
     }
 
@@ -440,7 +440,7 @@ public class AROCollectorMainActivity extends Activity {
      * Display the error messages when SD card is mounted and not available for
      * device to write on SD card.
      *
-     * @param mMidtraceflag : Boolean value to check if the error has triggered mid of
+     * @param midtraceflag : Boolean value to check if the error has triggered mid of
      *                      trace cycle or before start
      */
     private void showSDCardMountedError(boolean midtraceflag) {
@@ -458,7 +458,7 @@ public class AROCollectorMainActivity extends Activity {
     /**
      * Display the error messages when Airplane Mode is enabled and Wifi is off
      *
-     * @param mMidtraceflag : Boolean value to check if the error has triggered mid of
+     * @param midtraceflag : Boolean value to check if the error has triggered mid of
      *                      trace cycle or before start
      */
     private void showAirplaneModeEnabledError(boolean midtraceflag) {
